@@ -26,8 +26,8 @@ export default function App() {
 
   return (
     <div className="app-container">
-      <Products data={state.products} />
-      <Cart data={state.cart} />
+      <Products data={state.products} dispatch={dispatch} />
+      <Cart data={state.cart} dispatch={dispatch} />
     </div>
   );
 }
