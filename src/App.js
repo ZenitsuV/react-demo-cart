@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from 'react';
 import Products from './components/Products/Products';
 import Cart from './components/Cart/Cart';
-import { cartReducer } from './components/reducers/cartReducer';
+import { cartReducer } from './reducers/cartReducer';
 import './style.css';
 
 export default function App() {
@@ -26,8 +26,8 @@ export default function App() {
 
   return (
     <div className="app-container">
-      <Products data={state.products} dispatch={dispatch} />
-      <Cart data={state.cart} dispatch={dispatch} />
+      <Products state={state} dispatch={dispatch} />
+      <Cart state={state} dispatch={dispatch} />
     </div>
   );
 }
